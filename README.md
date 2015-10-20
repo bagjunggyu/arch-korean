@@ -168,21 +168,21 @@ Cinnamon을 설치했습니다.
 
 15)locale.conf 설정 - 한국어로 나오게 하기위함입니다. 
 * nano /etc/locale.conf
-LANG=ko_KR.UTF-8
-LANGUAGE="ko_KR.UTF-8:en_US.UTF-8"
-LC_CTYPE="ko_KR.UTF-8"
-LC_NUMERIC=ko_KR.UTF-8
-LC_TIME=ko_KR.UTF-8
-LC_COLLATE="ko_KR.UTF-8"
-LC_MONETARY=ko_KR.UTF-8
-LC_MESSAGES="ko_KR.UTF-8"
-LC_PAPER=ko_KR.UTF-8
-LC_NAME=ko_KR.UTF-8
-LC_ADDRESS=ko_KR.UTF-8
-LC_TELEPHONE=ko_KR.UTF-8
-LC_MEASUREMENT=ko_KR.UTF-8
-LC_IDENTIFICATION=ko_KR.UTF-8
-LC_ALL=
+* LANG=ko_KR.UTF-8
+* LANGUAGE="ko_KR.UTF-8:en_US.UTF-8"
+* LC_CTYPE="ko_KR.UTF-8"
+* LC_NUMERIC=ko_KR.UTF-8
+* LC_TIME=ko_KR.UTF-8
+* LC_COLLATE="ko_KR.UTF-8"
+* LC_MONETARY=ko_KR.UTF-8
+* LC_MESSAGES="ko_KR.UTF-8"
+* LC_PAPER=ko_KR.UTF-8
+* LC_NAME=ko_KR.UTF-8
+* LC_ADDRESS=ko_KR.UTF-8
+* LC_TELEPHONE=ko_KR.UTF-8
+* LC_MEASUREMENT=ko_KR.UTF-8
+* LC_IDENTIFICATION=ko_KR.UTF-8
+* LC_ALL=
 
 16) ttf-nanum 설치하기 (나눔폰트)
 * yaourt -S ttf-nanum
@@ -196,7 +196,3 @@ LC_ALL=
 * sudo pacman -S p7zip unrar zip arj gnome-calculator 
 * sudo pacman -S gparted dcfldd moc flashplugin nautilus-open-terminal nautilus-actions ntfs-3g  
 * yaourt -S covergloobus focuswriter radiotray
-
-
-
-
