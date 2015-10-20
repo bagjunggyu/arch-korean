@@ -1,5 +1,7 @@
 # arch-korean
 Dell Inspiron Mini 10 Arch Linux 설치과정
+* txt파일 링크
+* https://dl.dropboxusercontent.com/u/54450962/archlinux%20%EC%84%A4%EC%B9%98%EA%B3%BC%EC%A0%95
 
 1)하드디스크 정돈
 * ping -c 3 www.google.com
