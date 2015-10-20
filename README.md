@@ -7,9 +7,9 @@ Dell Inspiron Mini 10 Arch Linux 설치과정
 * systemctl start dhcpcd@enp4s0
 * umount /dev/sda*
 * cfdisk /dev/sda
-/dev/sda1 7000MB - bootable
-/dev/sda2 1024 MB - type 82 - swap 
-/dev/sda3 나머지 
+* /dev/sda1 7000MB - bootable
+* /dev/sda2 1024 MB - type 82 - swap 
+* /dev/sda3 나머지 
 * mkfs.ext4 /dev/sda1
 * mkfs.ext4 /dev/sda3
 * mkswap /dev/sda2
@@ -34,10 +34,10 @@ Dell Inspiron Mini 10 Arch Linux 설치과정
 * arch-chroot /mnt
 * echo arch > /etc/hostname
 * nano /etc/timezone
-Asia/Seoul
+* Asia/Seoul
 * nano /etc/locale.gen
-en_US.UTF-8 UTF-8
-ko_KR.UTF-8 UTF-8
+* en_US.UTF-8 UTF-8
+* ko_KR.UTF-8 UTF-8
 * locale-gen
 * hwclock --systohc --utc
 * pacman -S grub-bios
@@ -72,16 +72,16 @@ ko_KR.UTF-8 UTF-8
 
 5) Desktop-Environment 설치
 * pacman -S kde 
-https://wiki.archlinux.org/index.php/Kde
+* https://wiki.archlinux.org/index.php/Kde
 
 * pacman -S gnome gnome-shell gnome-extra
-https://wiki.archlinux.org/index.php/Gnome
+* https://wiki.archlinux.org/index.php/Gnome
 
 * pacman -Syy mate mate-extra mate-netbook 
-https://wiki.archlinux.org/index.php/Mate
+* https://wiki.archlinux.org/index.php/Mate
 
 * pacman -S cinnamon 
-https://wiki.archlinux.org/index.php/cinnamon
+* https://wiki.archlinux.org/index.php/cinnamon
 
 테마등의 별도 서버 더하기
 * nano /etc/pacman.d/mirrorlist
@@ -102,32 +102,32 @@ Cinnamon을 설치했습니다.
 * pacman -S virtualbox-guest-utils
 * modprobe -a vboxguest vboxsf vboxvideo
 * nano /etc/modules-load.d/virtualbox.config
-vboxguest
-vboxsf
-vboxvideo
+* vboxguest
+* vboxsf
+* vboxvideo
 * reboot
 
 8) 한글 폰트 & ibus ibus-hangul
 * pacman -S file-roller
-아래에서 NanumFont_Font_All.zip 파일을 다운받아서 ~/.fonts 에 압축을 풀어둠
-yaourt 설치후에 "yaourt -S ttf-nanum" 하면 설치됩니다.
-지금은 chromium으로 이 문서를 먼저 열어보기 위해서 이렇게 합니다.
-https://aur.archlinux.org/packages.php?ID=49832
+* 아래에서 NanumFont_Font_All.zip 파일을 다운받아서 ~/.fonts 에 압축을 풀어둠
+* yaourt 설치후에 "yaourt -S ttf-nanum" 하면 설치됩니다.
+* 지금은 chromium으로 이 문서를 먼저 열어보기 위해서 이렇게 합니다.
+* https://aur.archlinux.org/packages.php?ID=49832
 * pacman -S ibus ibus-hangul
-시작프로그램에 등록
-ibus-daemon
-nabi는 yaourt 설치후에 "yaourt -S nabi" 하면 됩니다.
+* 시작프로그램에 등록
+* ibus-daemon
+* nabi는 yaourt 설치후에 "yaourt -S nabi" 하면 됩니다.
 
 9) Gstreamer
 * pacman -S tilda gedit chromium
-https://wiki.archlinux.org/index.php/GStreamer
+* https://wiki.archlinux.org/index.php/GStreamer
 * pacman -S gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly gst-vaapi
 
-이것을 설치하시면 라디오 스트림을 포함해서 음악이 재생됩니다.
+* 이것을 설치하시면 라디오 스트림을 포함해서 음악이 재생됩니다.
 * pacman -S gstreamer0.10 gstreamer0.10-bad-plugins gstreamer0.10-base-plugins gstreamer0.10-ffmpeg gstreamer0.10-good-plugins gstreamer0.10-ugly-plugins gstreamer0.10-vaapi
 
 10) yaourt 설치 
-http://archlinux.fr/yaourt-en
+* http://archlinux.fr/yaourt-en
 * curl -O https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
 * tar zxvf package-query.tar.gz
 * cd package-query
@@ -142,17 +142,17 @@ http://archlinux.fr/yaourt-en
 11) chromium 에 pepper flash plugin 설치 
 * yaourt -S chromium-pepper-flash
 
-수동으로 설정하기
-libpepflashplayer.so
-https://dl.dropboxusercontent.com/u/54450962/libpepflashplayer.so
+* 수동으로 설정하기
+* libpepflashplayer.so
+* https://dl.dropboxusercontent.com/u/54450962/libpepflashplayer.so
 
 * cp libpepflashplayer.so /usr/lib/chromium
 * gedit /etc/chromium/default
 * # Options to pass to chromium-browser
-CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium/libpepflashplayer.so"
+* CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium/libpepflashplayer.so"
 
 12) 무선 네트워크 설정
-broadcom-wl 설치
+* broadcom-wl 설치
 * yaourt -S broadcom-wl
 * sudo pacman -S networkmanager network-manager-applet
 * sudo systemctl start NetworkManager
