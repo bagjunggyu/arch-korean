@@ -22,9 +22,9 @@ Dell Inspiron Mini 10 Arch Linux 설치과정
 
 2) 시스템 설정 
 * nano /etc/pacman.d/mirrorlist
-## Korea
-Server = http://mirror.premi.st/archlinux/$repo/os/$arch
-Server = http://ftp.kaist.ac.kr/ArchLinux/$repo/os/$arch
+* ## Korea
+* Server = http://mirror.premi.st/archlinux/$repo/os/$arch
+* Server = http://ftp.kaist.ac.kr/ArchLinux/$repo/os/$arch
 
 * pacstrap /mnt base base-devel
 * genfstab -p /mnt >> /mnt/etc/fstab
@@ -49,12 +49,12 @@ ko_KR.UTF-8 UTF-8
 * passwd 원하는 ID
 * pacman -S sudo gksu
 * nano /etc/sudoers 또는 EDITOR=nano visudo
-## User privilege specification
-##
-root ALL=(ALL) ALL
-원하는 ID ALL=(ALL) ALL
-## Uncomment to allow members of group wheel to excute any command
-%wheel ALL=(ALL) ALL
+* ## User privilege specification
+* ##
+* root ALL=(ALL) ALL
+* 원하는 ID ALL=(ALL) ALL
+* ## Uncomment to allow members of group wheel to excute any command
+* %wheel ALL=(ALL) ALL
 * exit
 * umount /mnt/{boot,home,}
 * reboot
@@ -71,27 +71,27 @@ root ALL=(ALL) ALL
 * pkill x
 
 5) Desktop-Environment 설치
-pacman -S kde 
+* pacman -S kde 
 https://wiki.archlinux.org/index.php/Kde
 
-pacman -S gnome gnome-shell gnome-extra
+* pacman -S gnome gnome-shell gnome-extra
 https://wiki.archlinux.org/index.php/Gnome
 
-pacman -Syy mate mate-extra mate-netbook 
+* pacman -Syy mate mate-extra mate-netbook 
 https://wiki.archlinux.org/index.php/Mate
 
-pacman -S cinnamon 
+* pacman -S cinnamon 
 https://wiki.archlinux.org/index.php/cinnamon
 
 테마등의 별도 서버 더하기
 * nano /etc/pacman.d/mirrorlist
-## [cinnamon]
-Server = http://archlinux.zoelife4u.org/cinnamon/$arch
+* ## [cinnamon]
+* Server = http://archlinux.zoelife4u.org/cinnamon/$arch
 
 6) DE 설정 팁
-kdm
-pkill kdm
-systemctl start gdm.service
+* kdm
+* pkill kdm
+* systemctl start gdm.service
 
 Cinnamon을 설치했습니다.
 * pacman -S cinnamon
@@ -108,7 +108,7 @@ vboxvideo
 * reboot
 
 8) 한글 폰트 & ibus ibus-hangul
-pacman -S file-roller
+* pacman -S file-roller
 아래에서 NanumFont_Font_All.zip 파일을 다운받아서 ~/.fonts 에 압축을 풀어둠
 yaourt 설치후에 "yaourt -S ttf-nanum" 하면 설치됩니다.
 지금은 chromium으로 이 문서를 먼저 열어보기 위해서 이렇게 합니다.
@@ -119,9 +119,9 @@ ibus-daemon
 nabi는 yaourt 설치후에 "yaourt -S nabi" 하면 됩니다.
 
 9) Gstreamer
-pacman -S tilda gedit chromium
+* pacman -S tilda gedit chromium
 https://wiki.archlinux.org/index.php/GStreamer
-#pacman -S gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly gst-vaapi
+* pacman -S gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly gst-vaapi
 
 이것을 설치하시면 라디오 스트림을 포함해서 음악이 재생됩니다.
 * pacman -S gstreamer0.10 gstreamer0.10-bad-plugins gstreamer0.10-base-plugins gstreamer0.10-ffmpeg gstreamer0.10-good-plugins gstreamer0.10-ugly-plugins gstreamer0.10-vaapi
@@ -148,7 +148,7 @@ https://dl.dropboxusercontent.com/u/54450962/libpepflashplayer.so
 
 * cp libpepflashplayer.so /usr/lib/chromium
 * gedit /etc/chromium/default
-# Options to pass to chromium-browser
+* # Options to pass to chromium-browser
 CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium/libpepflashplayer.so"
 
 12) 무선 네트워크 설정
@@ -185,7 +185,7 @@ LC_IDENTIFICATION=ko_KR.UTF-8
 LC_ALL=
 
 16) ttf-nanum 설치하기 (나눔폰트)
-yaourt -S ttf-nanum
+* yaourt -S ttf-nanum
 
 17) 시작할때 gdm 으로 시작하며 , 네트워크 자동시작하기
 * sudo systemctl enable gdm
